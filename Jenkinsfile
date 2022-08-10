@@ -29,7 +29,7 @@ pipeline{
     }
     stage("deploy"){
       when{
-        expression{params.Branch=='main'
+           expression{params.Branch=='main'}
       }
       steps{
          echo "deploy application"
