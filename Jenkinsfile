@@ -9,9 +9,9 @@ pipeline{
   
   }
   parameters{
-    string(name: 'Branch',defaultValue: 'main',descrition: 'please type branch')
-    choice(name: 'Version',choices: ['1.2.0','1.2.1','1.2.2'],descrpion: 'select version')
-    booleanParam(name: 'executeTests',defaultValue: true,descrption: 'test')
+    string(name: 'Branch',defaultValue: 'main',description: 'please type branch')
+    choice(name: 'Version',choices: ['1.2.0','1.2.1','1.2.2'],descrption: 'select version')
+    booleanParam(name: 'executeTests',defaultValue: true,description: 'test')
   }
   stages{
     stage("build"){
