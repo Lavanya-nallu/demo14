@@ -33,8 +33,8 @@ pipeline{
       }
       steps{
          echo "deploy application"
-         echo "deploying ${SERVER_CRED}"
-         sh " ${SERVER_CRED}"
+         echo 'deploying ${SERVER_CRED}'
+         sh '${SERVER_CRED}'
       }
     }
   }
