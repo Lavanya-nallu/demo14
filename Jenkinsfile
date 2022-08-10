@@ -6,7 +6,7 @@ pipeline{
   }
   environment{
       NEW_VERSION='1.2.0'
-  
+      SERVER_CRED=credentials('server-cred')
   }
   parameters{
     string(name: 'Branch',defaultValue: 'main',description: 'please type branch')
@@ -33,6 +33,8 @@ pipeline{
       }
       steps{
          echo "deploy application"
+         echo "deploying ${SERVER_CRED}"
+         sh " ${SERVER_CRED}"
       }
     }
   }
